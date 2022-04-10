@@ -52,8 +52,8 @@ struct NewsCellView: View {
     
     @EnvironmentObject var favorites: Favorites
     @State var isFavoriteAnimationPercent: CGFloat = 0
+    @State var isFavoriteAnimationEnabled: Bool = false
     @State var isFavorite: Bool = false
-    
     
     var body: some View {
         HStack {
@@ -71,23 +71,15 @@ struct NewsCellView: View {
                     .lineLimit(4)
                 Spacer()
                 Button {
-                    // Альтернативная версия анимации
-                    //let animationDuration = 1.3
-                    //withAnimation(.easeInOut(duration: animationDuration / 2)) {
-                    //    isFavoriteAnimationPercent = 1
-                    //}
-                    //DispatchQueue.main.asyncAfter(deadline: .now() + animationDuration / 2) {
-                    //    withAnimation(.easeInOut(duration: animationDuration / 2)) {
-                    //        isFavoriteAnimationPercent = 0
-                    //    }
-                    //    isFavorite.toggle()
-                    //}
-                    
-                    withAnimation(.easeIn(duration: 5.3)) {
-                        isFavoriteAnimationPercent = 1
+                    withAnimation(.easeIn(duration: 1.3)) {
+                        isFavoriteAnimationPercent = isFavorite ? 0 : 1
                     }
                     isFavorite.toggle()
-                    favorites.add(newsInfo)
+                    if isFavorite == false {
+                        favorites.add(newsInfo)
+                    } else {
+                        favorites.remove(newsInfo)
+                    }
                 } label: {
                     Text(isFavorite ? "Remove from favorites" : "Add to favorites" )
                         .foregroundColor(.blue)
@@ -114,9 +106,14 @@ struct NewsCellView: View {
         }
         .frame(height: 120)
         .background(.white)
-        .modifier(AddToFavoriteEffectV2(percent: isFavoriteAnimationPercent))
+        .modifier(AddToFavoriteAnimationViewModifier(animationPercent: isFavoriteAnimationPercent, animationEnabled: isFavoriteAnimationEnabled))
         .onAppear {
             isFavorite = favorites.contains(newsInfo)
+            isFavoriteAnimationPercent = isFavorite ? 1 : 0
+            isFavoriteAnimationEnabled = true
+        }
+        .onDisappear {
+            isFavoriteAnimationEnabled = false
         }
     }
 }

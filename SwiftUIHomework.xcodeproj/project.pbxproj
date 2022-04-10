@@ -13,6 +13,7 @@
 		4D76683F27E47AB300437144 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4D76682D27E47AB300437144 /* Assets.xcassets */; };
 		4D76684A27E47D7200437144 /* NewsScreenView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D76684927E47D7200437144 /* NewsScreenView.swift */; };
 		4D76684E27E47D8C00437144 /* FavoriteScreenView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D76684D27E47D8C00437144 /* FavoriteScreenView.swift */; };
+		4DA4B7872802C03D0017FAAB /* AddToFavoriteAnimationViewModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DA4B7862802C03D0017FAAB /* AddToFavoriteAnimationViewModifier.swift */; };
 		4DE0A96C27EF0A24006DD27E /* Favorites.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DE0A96B27EF0A24006DD27E /* Favorites.swift */; };
 		4DE0A96E27F05573006DD27E /* NewsListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DE0A96D27F05573006DD27E /* NewsListView.swift */; };
 		4DE9275127E76BFD00F31978 /* TheNewsAPI in Frameworks */ = {isa = PBXBuildFile; productRef = 4DE9275027E76BFD00F31978 /* TheNewsAPI */; };
@@ -37,6 +38,7 @@
 		4D76684927E47D7200437144 /* NewsScreenView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsScreenView.swift; sourceTree = "<group>"; };
 		4D76684D27E47D8C00437144 /* FavoriteScreenView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoriteScreenView.swift; sourceTree = "<group>"; };
 		4DA4B7832802BE840017FAAB /* SwiftUIHomework--iOS--Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "SwiftUIHomework--iOS--Info.plist"; sourceTree = "<group>"; };
+		4DA4B7862802C03D0017FAAB /* AddToFavoriteAnimationViewModifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddToFavoriteAnimationViewModifier.swift; sourceTree = "<group>"; };
 		4DE0A96B27EF0A24006DD27E /* Favorites.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Favorites.swift; sourceTree = "<group>"; };
 		4DE0A96D27F05573006DD27E /* NewsListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsListView.swift; sourceTree = "<group>"; };
 		4DE9274F27E76BF300F31978 /* TheNewsAPI */ = {isa = PBXFileReference; lastKnownFileType = wrapper; name = TheNewsAPI; path = Modules/TheNewsAPI; sourceTree = "<group>"; };
@@ -79,11 +81,10 @@
 			isa = PBXGroup;
 			children = (
 				4DF5EB0627EE41250081F70F /* NavigationStack */,
-				4DF5EB0127EE3D870081F70F /* NewsScreenView */,
+				4DA4B7842802BFBD0017FAAB /* SupportViews */,
+				4DA4B7852802BFD10017FAAB /* ScreenViews */,
 				4D76682B27E47AAF00437144 /* SwiftUIHomeworkApp.swift */,
 				4D76682C27E47AAF00437144 /* ContentView.swift */,
-				4D76684D27E47D8C00437144 /* FavoriteScreenView.swift */,
-				4DF5EAFF27EE216E0081F70F /* LazyView.swift */,
 				4D76682D27E47AB300437144 /* Assets.xcassets */,
 			);
 			path = Shared;
@@ -95,6 +96,23 @@
 				4D76683227E47AB300437144 /* SwiftUIHomework3_4.app */,
 			);
 			name = Products;
+			sourceTree = "<group>";
+		};
+		4DA4B7842802BFBD0017FAAB /* SupportViews */ = {
+			isa = PBXGroup;
+			children = (
+				4DF5EAFF27EE216E0081F70F /* LazyView.swift */,
+			);
+			path = SupportViews;
+			sourceTree = "<group>";
+		};
+		4DA4B7852802BFD10017FAAB /* ScreenViews */ = {
+			isa = PBXGroup;
+			children = (
+				4DF5EB0127EE3D870081F70F /* NewsScreenView */,
+				4D76684D27E47D8C00437144 /* FavoriteScreenView.swift */,
+			);
+			path = ScreenViews;
 			sourceTree = "<group>";
 		};
 		4DE9273B27E490B500F31978 /* Frameworks */ = {
@@ -113,6 +131,7 @@
 				4DF5EB0227EE3DB60081F70F /* NewsViewModel.swift */,
 				4DF5EB0427EE3E0E0081F70F /* AddToFavoriteEffect.swift */,
 				4D26C43927F9A0E000DA899B /* AddToFavoriteEffectV2.swift */,
+				4DA4B7862802C03D0017FAAB /* AddToFavoriteAnimationViewModifier.swift */,
 				4DF5EB1727EE4B220081F70F /* NewsInfo1ScreenView.swift */,
 				4DF5EB1927EE4B2D0081F70F /* NewsInfo2ScreenView.swift */,
 			);
@@ -220,6 +239,7 @@
 				4DF5EB0A27EE41840081F70F /* NavigationStackScreen.swift in Sources */,
 				4DF5EB0E27EE426E0081F70F /* NavigationStackContainerViewModel.swift in Sources */,
 				4D76684A27E47D7200437144 /* NewsScreenView.swift in Sources */,
+				4DA4B7872802C03D0017FAAB /* AddToFavoriteAnimationViewModifier.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

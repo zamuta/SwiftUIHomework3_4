@@ -15,7 +15,7 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "4D76683127E47AB300437144"
-               BuildableName = "SwiftUIHomework3.app"
+               BuildableName = "SwiftUIHomework3_4.app"
                BlueprintName = "SwiftUIHomework (iOS)"
                ReferencedContainer = "container:SwiftUIHomework.xcodeproj">
             </BuildableReference>
@@ -45,7 +45,7 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "4D76683127E47AB300437144"
-            BuildableName = "SwiftUIHomework3.app"
+            BuildableName = "SwiftUIHomework3_4.app"
             BlueprintName = "SwiftUIHomework (iOS)"
             ReferencedContainer = "container:SwiftUIHomework.xcodeproj">
          </BuildableReference>
@@ -62,7 +62,7 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "4D76683127E47AB300437144"
-            BuildableName = "SwiftUIHomework3.app"
+            BuildableName = "SwiftUIHomework3_4.app"
             BlueprintName = "SwiftUIHomework (iOS)"
             ReferencedContainer = "container:SwiftUIHomework.xcodeproj">
          </BuildableReference>
