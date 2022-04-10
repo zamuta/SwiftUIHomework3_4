@@ -7,9 +7,11 @@
 
 import Foundation
 import TheNewsAPI
+import Combine
 
 final class NewsViewModel: ObservableObject {
     @InjectedService private var api: NewsAPI.Type
+    private var subscriptions: Set<AnyCancellable> = .init()
     
     // itV4cbFUXsuNfzGubDIN2nGnaOPFxs6H0Pl0Cxc0
     // zoF0vLrnZn9v8owS6Ev4xxsOUUG4SWMA62JZvGbG
@@ -36,16 +38,17 @@ final class NewsViewModel: ObservableObject {
         }
         isLoading = true
         // В бесплатной версии апишки ограничение на limit 5
-        api.newsAllGet(apiToken:apiToken, limit: 5, page: page + 1, search: query, language: "en") { [weak self] data, error in
+        let promise = api.deferred_newsAllGet(apiToken:apiToken, limit: 5, page: page + 1, search: query, language: "en")
+        promise.sink { [weak self] completion in
             guard let self = self else { return }
-            if(error == nil) {
-                let meta = data?.meta
-                let news = data?.data
-                self.page = meta!.page
-                self.total = meta!.found
-                self.news.append(contentsOf: (news ?? []))
-            }
             self.isLoading = false
-        }
+        } receiveValue: { [weak self] response in
+            guard let self = self else { return }
+            let meta = response.meta
+            let news = response.data
+            self.page = meta!.page
+            self.total = meta!.found
+            self.news.append(contentsOf: (news ?? []))
+        }.store(in: &subscriptions)
     }
 }

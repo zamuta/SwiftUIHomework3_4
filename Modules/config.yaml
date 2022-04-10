@@ -1,3 +1,9 @@
+templateDir: Templates
+files:
+  extension-api.mustache:
+    templateType: API
+    destinationFilename: +Deferred.swift
 additionalProperties:
   readonlyProperties: true
   lenientTypeCast: true
+  responseAs: Combine

@@ -9,12 +9,8 @@ import SwiftUI
 import TheNewsAPI
 
 struct NewsListView: View {
-    @StateObject private var newsViewModel: NewsViewModel
+    @EnvironmentObject var newsViewModel: NewsViewModel
     @EnvironmentObject var routeModel: NavigationContainerViewModel
-    
-    init(viewModel: @autoclosure @escaping () -> NewsViewModel) {
-        _newsViewModel = StateObject(wrappedValue: viewModel())
-    }
     
     var body: some View {
         List {
@@ -43,7 +39,7 @@ struct NewsListView: View {
 
 struct NewsListView_Previews: PreviewProvider {
     static var previews: some View {
-        NewsListView(viewModel: .init(query: "tesla"))
+        NewsListView().environmentObject(NewsViewModel.init(query: "tesla"))
     }
 }
 

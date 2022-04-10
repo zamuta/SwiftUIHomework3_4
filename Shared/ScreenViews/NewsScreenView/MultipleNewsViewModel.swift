@@ -14,6 +14,7 @@ enum NewsType {
 final class MultipleNewsViewModel: ObservableObject {
     private let newsViewModels: [NewsType : NewsViewModel] = [.TeslaNews : .init(query: "tesla"),
                                                               .IntelNews : .init(query: "intel")]
+
     func newsViewModel(_ forType: NewsType) -> NewsViewModel {
         return newsViewModels[forType]!
     }

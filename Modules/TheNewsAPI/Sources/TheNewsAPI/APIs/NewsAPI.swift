@@ -6,6 +6,9 @@
 //
 
 import Foundation
+#if canImport(Combine)
+import Combine
+#endif
 #if canImport(AnyCodable)
 import AnyCodable
 #endif
@@ -20,19 +23,28 @@ open class NewsAPI {
      - parameter search: (query)  (optional)
      - parameter language: (query)  (optional)
      - parameter apiResponseQueue: The queue on which api response is dispatched.
-     - parameter completion: completion handler to receive the data and the error objects
+     - returns: AnyPublisher<InlineResponse200, Error>
      */
-    @discardableResult
-    open class func newsAllGet(apiToken: String, limit: Int, page: Int, search: String? = nil, language: String? = nil, apiResponseQueue: DispatchQueue = OpenAPIClientAPI.apiResponseQueue, completion: @escaping ((_ data: InlineResponse200?, _ error: Error?) -> Void)) -> RequestTask {
-        return newsAllGetWithRequestBuilder(apiToken: apiToken, limit: limit, page: page, search: search, language: language).execute(apiResponseQueue) { result in
-            switch result {
-            case let .success(response):
-                completion(response.body, nil)
-            case let .failure(error):
-                completion(nil, error)
+    #if canImport(Combine)
+    @available(macOS 10.15, iOS 13.0, tvOS 13.0, watchOS 6.0, *)
+    open class func newsAllGet(apiToken: String, limit: Int, page: Int, search: String? = nil, language: String? = nil, apiResponseQueue: DispatchQueue = OpenAPIClientAPI.apiResponseQueue) -> AnyPublisher<InlineResponse200, Error> {
+        var requestTask: RequestTask?
+        return Future<InlineResponse200, Error> { promise in
+            requestTask = newsAllGetWithRequestBuilder(apiToken: apiToken, limit: limit, page: page, search: search, language: language).execute(apiResponseQueue) { result in
+                switch result {
+                case let .success(response):
+                    promise(.success(response.body))
+                case let .failure(error):
+                    promise(.failure(error))
+                }
             }
         }
+        .handleEvents(receiveCancel: {
+            requestTask?.cancel()
+        })
+        .eraseToAnyPublisher()
     }
+    #endif
 
     /**
      - GET /news/all
@@ -73,19 +85,28 @@ open class NewsAPI {
      - parameter apiToken: (query)  
      - parameter uuid: (path)  
      - parameter apiResponseQueue: The queue on which api response is dispatched.
-     - parameter completion: completion handler to receive the data and the error objects
+     - returns: AnyPublisher<NewsInfo, Error>
      */
-    @discardableResult
-    open class func newsByUUIDGet(apiToken: String, uuid: String, apiResponseQueue: DispatchQueue = OpenAPIClientAPI.apiResponseQueue, completion: @escaping ((_ data: NewsInfo?, _ error: Error?) -> Void)) -> RequestTask {
-        return newsByUUIDGetWithRequestBuilder(apiToken: apiToken, uuid: uuid).execute(apiResponseQueue) { result in
-            switch result {
-            case let .success(response):
-                completion(response.body, nil)
-            case let .failure(error):
-                completion(nil, error)
+    #if canImport(Combine)
+    @available(macOS 10.15, iOS 13.0, tvOS 13.0, watchOS 6.0, *)
+    open class func newsByUUIDGet(apiToken: String, uuid: String, apiResponseQueue: DispatchQueue = OpenAPIClientAPI.apiResponseQueue) -> AnyPublisher<NewsInfo, Error> {
+        var requestTask: RequestTask?
+        return Future<NewsInfo, Error> { promise in
+            requestTask = newsByUUIDGetWithRequestBuilder(apiToken: apiToken, uuid: uuid).execute(apiResponseQueue) { result in
+                switch result {
+                case let .success(response):
+                    promise(.success(response.body))
+                case let .failure(error):
+                    promise(.failure(error))
+                }
             }
         }
+        .handleEvents(receiveCancel: {
+            requestTask?.cancel()
+        })
+        .eraseToAnyPublisher()
     }
+    #endif
 
     /**
      - GET /news/uuid/{uuid}
