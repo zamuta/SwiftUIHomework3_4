@@ -11,7 +11,7 @@ struct NewsScreenView: View {
     private let newsViewModels: [NewsType : NewsViewModel] = [.TeslaNews : .init(newsType: .TeslaNews),
                                                               .IntelNews : .init(newsType: .IntelNews)]
     @State private var selectedNewsType: NewsType = .TeslaNews
-    @StateObject private var favorites: Favorites = .init()
+    @StateObject private var favorites: FavoritesViewModel = .init()
     @EnvironmentObject var routeModel: NavigationContainerViewModel
     
     var body: some View {

@@ -13,6 +13,8 @@ enum NewsType {
 }
 
 final class NewsViewModel: ObservableObject {
+    @InjectedService private var api: NewsAPI.Type
+    
     // itV4cbFUXsuNfzGubDIN2nGnaOPFxs6H0Pl0Cxc0
     // zoF0vLrnZn9v8owS6Ev4xxsOUUG4SWMA62JZvGbG
     // jHOR9GuzkO8cghjEDTHtQGddUhJL9FvMYDx8Gx3s
@@ -39,7 +41,7 @@ final class NewsViewModel: ObservableObject {
         isLoading = true
         // В бесплатной версии апишки ограничение на limit 5
         let search = newsType == .TeslaNews ? "tesla" : "intel"
-        NewsAPI.newsAllGet(apiToken:apiToken, limit: 5, page: page + 1, search: search, language: "en") { [weak self] data, error in
+        api.newsAllGet(apiToken:apiToken, limit: 5, page: page + 1, search: search, language: "en") { [weak self] data, error in
             guard let self = self else { return }
             if(error == nil) {
                 let meta = data?.meta

@@ -7,9 +7,8 @@
 
 import Foundation
 import TheNewsAPI
-import SwiftUI
 
-class Favorites: ObservableObject {
+class FavoritesService {
     private let kUserDefaultsFavoritesKey = "favorites"
     private var uuids: [String] = [] // Array для сохранения порядка добавления
     
@@ -22,7 +21,6 @@ class Favorites: ObservableObject {
     }
     
     func add(_ newinfo: NewsInfo) {
-        objectWillChange.send()
         let index = uuids.firstIndex(of: newinfo.uuid)
         if (index == nil) {
             uuids.append(newinfo.uuid)
@@ -31,7 +29,6 @@ class Favorites: ObservableObject {
     }
     
     func remove(_ newinfo: NewsInfo) {
-        objectWillChange.send()
         let index = uuids.firstIndex(of: newinfo.uuid)
         if (index != nil) {
             uuids.remove(at: index!)
@@ -39,7 +36,7 @@ class Favorites: ObservableObject {
         save()
     }
     
-    func save() {
+    private func save() {
         UserDefaults.standard.set(uuids, forKey: kUserDefaultsFavoritesKey)
     }
 }

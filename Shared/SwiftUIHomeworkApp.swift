@@ -9,6 +9,10 @@ import SwiftUI
 
 @main
 struct SwiftUIHomeworkApp: App {
+    init() {
+        ServiceLocator.shared.configure()
+    }
+    
     var body: some Scene {
         WindowGroup {
             ContentView()

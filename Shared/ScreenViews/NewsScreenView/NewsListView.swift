@@ -50,7 +50,7 @@ struct NewsListView_Previews: PreviewProvider {
 struct NewsCellView: View {
     var newsInfo: NewsInfo
     
-    @EnvironmentObject var favorites: Favorites
+    @EnvironmentObject var favorites: FavoritesViewModel
     @State var isFavoriteAnimationPercent: CGFloat = 0
     @State var isFavoriteAnimationEnabled: Bool = false
     @State var isFavorite: Bool = false
