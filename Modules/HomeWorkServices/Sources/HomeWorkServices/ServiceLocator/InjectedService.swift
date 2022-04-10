@@ -6,7 +6,6 @@
 //
 
 import Foundation
-import HomeWorkServices
 
 @propertyWrapper
 public struct InjectedService<T> {
