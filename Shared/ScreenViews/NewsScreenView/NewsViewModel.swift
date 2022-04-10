@@ -17,7 +17,7 @@ final class NewsViewModel: ObservableObject {
     // itV4cbFUXsuNfzGubDIN2nGnaOPFxs6H0Pl0Cxc0
     // zoF0vLrnZn9v8owS6Ev4xxsOUUG4SWMA62JZvGbG
     // jHOR9GuzkO8cghjEDTHtQGddUhJL9FvMYDx8Gx3s
-    private let apiToken = "itV4cbFUXsuNfzGubDIN2nGnaOPFxs6H0Pl0Cxc0"
+    private let apiToken = "jHOR9GuzkO8cghjEDTHtQGddUhJL9FvMYDx8Gx3s"
     
     public private(set) var isLoading: Bool = false
     public private(set) var page: Int = 0
