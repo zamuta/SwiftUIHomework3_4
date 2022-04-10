@@ -71,12 +71,12 @@ struct NewsCellView: View {
                     withAnimation(.easeIn(duration: 1.3)) {
                         isFavoriteAnimationPercent = isFavorite ? 0 : 1
                     }
-                    isFavorite.toggle()
                     if isFavorite == false {
                         favorites.add(newsInfo)
                     } else {
                         favorites.remove(newsInfo)
                     }
+                    isFavorite = favorites.contains(newsInfo)
                 } label: {
                     Text(isFavorite ? "Remove from favorites" : "Add to favorites" )
                         .foregroundColor(.blue)
