@@ -22,7 +22,6 @@
 		4DEC77B6280313050069DB8F /* HomeWorkUI in Frameworks */ = {isa = PBXBuildFile; productRef = 4DEC77B5280313050069DB8F /* HomeWorkUI */; };
 		4DEC77BA28031B640069DB8F /* ServiceLocator+Configurator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DEC77B928031B640069DB8F /* ServiceLocator+Configurator.swift */; };
 		4DF5EB0327EE3DB60081F70F /* NewsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DF5EB0227EE3DB60081F70F /* NewsViewModel.swift */; };
-		4DF5EB0527EE3E0E0081F70F /* AddToFavoriteEffect.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DF5EB0427EE3E0E0081F70F /* AddToFavoriteEffect.swift */; };
 		4DF5EB1827EE4B220081F70F /* NewsInfo1ScreenView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DF5EB1727EE4B220081F70F /* NewsInfo1ScreenView.swift */; };
 		4DF5EB1A27EE4B2D0081F70F /* NewsInfo2ScreenView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DF5EB1927EE4B2D0081F70F /* NewsInfo2ScreenView.swift */; };
 /* End PBXBuildFile section */
@@ -45,7 +44,6 @@
 		4DEC77B4280312990069DB8F /* HomeWorkUI */ = {isa = PBXFileReference; lastKnownFileType = wrapper; name = HomeWorkUI; path = Modules/HomeWorkUI; sourceTree = "<group>"; };
 		4DEC77B928031B640069DB8F /* ServiceLocator+Configurator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "ServiceLocator+Configurator.swift"; sourceTree = "<group>"; };
 		4DF5EB0227EE3DB60081F70F /* NewsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsViewModel.swift; sourceTree = "<group>"; };
-		4DF5EB0427EE3E0E0081F70F /* AddToFavoriteEffect.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddToFavoriteEffect.swift; sourceTree = "<group>"; };
 		4DF5EB1727EE4B220081F70F /* NewsInfo1ScreenView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsInfo1ScreenView.swift; sourceTree = "<group>"; };
 		4DF5EB1927EE4B2D0081F70F /* NewsInfo2ScreenView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsInfo2ScreenView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -129,7 +127,6 @@
 				4DEC77A62802F46C0069DB8F /* MultipleNewsViewModel.swift */,
 				4D76684927E47D7200437144 /* NewsScreenView.swift */,
 				4DE0A96D27F05573006DD27E /* NewsListView.swift */,
-				4DF5EB0427EE3E0E0081F70F /* AddToFavoriteEffect.swift */,
 				4D26C43927F9A0E000DA899B /* AddToFavoriteEffectV2.swift */,
 				4DA4B7862802C03D0017FAAB /* AddToFavoriteAnimationViewModifier.swift */,
 				4DF5EB1727EE4B220081F70F /* NewsInfo1ScreenView.swift */,
@@ -215,7 +212,6 @@
 				4D76684E27E47D8C00437144 /* FavoriteScreenView.swift in Sources */,
 				4DE0A96E27F05573006DD27E /* NewsListView.swift in Sources */,
 				4D26C43A27F9A0E000DA899B /* AddToFavoriteEffectV2.swift in Sources */,
-				4DF5EB0527EE3E0E0081F70F /* AddToFavoriteEffect.swift in Sources */,
 				4DF5EB0327EE3DB60081F70F /* NewsViewModel.swift in Sources */,
 				4D76683D27E47AB300437144 /* ContentView.swift in Sources */,
 				4D76683B27E47AB300437144 /* SwiftUIHomeworkApp.swift in Sources */,
