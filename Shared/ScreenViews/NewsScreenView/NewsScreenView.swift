@@ -9,9 +9,7 @@ import SwiftUI
 import HomeWorkUI
 
 struct NewsScreenView: View {
-    @StateObject private var multipleNewsViewModel: MultipleNewsViewModel = .init()
-    @StateObject private var favoritesViewModel: FavoritesViewModel = .init()
-    @EnvironmentObject var routeModel: NavigationContainerViewModel
+    @EnvironmentObject private var multipleNewsViewModel: MultipleNewsViewModel
     
     @State private var selectedNewsType: NewsType = .TeslaNews
     
@@ -26,11 +24,9 @@ struct NewsScreenView: View {
             case .TeslaNews:
                 LazyView(NewsListView())
                     .environmentObject(multipleNewsViewModel.newsViewModel(.TeslaNews))
-                    .environmentObject(favoritesViewModel)
             case .IntelNews:
                 LazyView(NewsListView())
                     .environmentObject(multipleNewsViewModel.newsViewModel(.IntelNews))
-                    .environmentObject(favoritesViewModel)
             }
         } // VStack
     }

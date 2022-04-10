@@ -20,12 +20,16 @@ struct ContentView: View {
             NavigationStackContainerView(transition: NavigationStackTransition.custom(.slide), content: {NewsScreenView()})
                 .tabItem {
                     Image(systemName: "doc")
-                }.tag(MainTab.ProductScreen)
+                }
+                .tag(MainTab.ProductScreen)
+                .environmentObject(MultipleNewsViewModel.init())
             FavoriteScreenView()
                 .tabItem {
                     Image(systemName: "star")
-                }.tag(MainTab.CartScreen)
+                }
+                .tag(MainTab.CartScreen)
         }
+        .environmentObject(FavoritesViewModel.init())
     }
 }
 
