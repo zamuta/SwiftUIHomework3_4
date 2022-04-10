@@ -43,7 +43,7 @@ struct NewsListView: View {
 
 struct NewsListView_Previews: PreviewProvider {
     static var previews: some View {
-        NewsListView(viewModel: .init(newsType: .TeslaNews))
+        NewsListView(viewModel: .init(query: "tesla"))
     }
 }
 

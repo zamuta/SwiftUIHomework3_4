@@ -8,8 +8,7 @@
 import SwiftUI
 
 struct NewsScreenView: View {
-    private let newsViewModels: [NewsType : NewsViewModel] = [.TeslaNews : .init(newsType: .TeslaNews),
-                                                              .IntelNews : .init(newsType: .IntelNews)]
+    private let multipleNewsViewModel: MultipleNewsViewModel = .init()
     @State private var selectedNewsType: NewsType = .TeslaNews
     @StateObject private var favorites: FavoritesViewModel = .init()
     @EnvironmentObject var routeModel: NavigationContainerViewModel
@@ -23,9 +22,9 @@ struct NewsScreenView: View {
             .pickerStyle(SegmentedPickerStyle())
             switch selectedNewsType {
             case .TeslaNews:
-                LazyView(NewsListView(viewModel: newsViewModels[.TeslaNews]!)).environmentObject(favorites)
+                LazyView(NewsListView(viewModel: multipleNewsViewModel.newsViewModel(.TeslaNews))).environmentObject(favorites)
             case .IntelNews:
-                LazyView(NewsListView(viewModel: newsViewModels[.IntelNews]!)).environmentObject(favorites)
+                LazyView(NewsListView(viewModel: multipleNewsViewModel.newsViewModel(.IntelNews))).environmentObject(favorites)
             }
         } // VStack
     }

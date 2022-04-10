@@ -8,10 +8,6 @@
 import Foundation
 import TheNewsAPI
 
-enum NewsType {
-    case TeslaNews, IntelNews
-}
-
 final class NewsViewModel: ObservableObject {
     @InjectedService private var api: NewsAPI.Type
     
@@ -24,11 +20,11 @@ final class NewsViewModel: ObservableObject {
     public private(set) var page: Int = 0
     public private(set) var total: Int = .max
     
-    private var newsType: NewsType = .TeslaNews
+    private let query: String
     @Published private(set) var news: [NewsInfo] = []
     
-    init(newsType: NewsType) {
-        self.newsType = newsType
+    init(query: String) {
+        self.query = query
     }
     
     func fetchNext() {
@@ -40,8 +36,7 @@ final class NewsViewModel: ObservableObject {
         }
         isLoading = true
         // В бесплатной версии апишки ограничение на limit 5
-        let search = newsType == .TeslaNews ? "tesla" : "intel"
-        api.newsAllGet(apiToken:apiToken, limit: 5, page: page + 1, search: search, language: "en") { [weak self] data, error in
+        api.newsAllGet(apiToken:apiToken, limit: 5, page: page + 1, search: query, language: "en") { [weak self] data, error in
             guard let self = self else { return }
             if(error == nil) {
                 let meta = data?.meta
