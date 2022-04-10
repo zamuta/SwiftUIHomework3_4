@@ -8,19 +8,21 @@
 import Foundation
 import TheNewsAPI
 
-class FavoritesService {
+public class FavoritesService {
+    static public let shared = FavoritesService()
+    
     private let kUserDefaultsFavoritesKey = "favorites"
     private var uuids: [String] = [] // Array для сохранения порядка добавления
     
-    init() {
+    public init() {
         uuids = UserDefaults.standard.object(forKey: kUserDefaultsFavoritesKey) as? [String] ?? []
     }
     
-    func contains(_ newinfo: NewsInfo) -> Bool {
+    public func contains(_ newinfo: NewsInfo) -> Bool {
         uuids.contains(newinfo.uuid)
     }
     
-    func add(_ newinfo: NewsInfo) {
+    public func add(_ newinfo: NewsInfo) {
         let index = uuids.firstIndex(of: newinfo.uuid)
         if (index == nil) {
             uuids.append(newinfo.uuid)
@@ -28,7 +30,7 @@ class FavoritesService {
         save()
     }
     
-    func remove(_ newinfo: NewsInfo) {
+    public func remove(_ newinfo: NewsInfo) {
         let index = uuids.firstIndex(of: newinfo.uuid)
         if (index != nil) {
             uuids.remove(at: index!)

@@ -7,6 +7,7 @@
 
 import SwiftUI
 import TheNewsAPI
+import HomeWorkUI
 
 struct NewsListView: View {
     @EnvironmentObject var newsViewModel: NewsViewModel

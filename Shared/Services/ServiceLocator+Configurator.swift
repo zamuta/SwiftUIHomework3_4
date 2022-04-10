@@ -6,10 +6,11 @@
 //
 
 import Foundation
+import HomeWorkServices
 import TheNewsAPI
 
 extension ServiceLocator {
-    func configure() {
+    public func configure() {
         self.addService(service: NewsAPI.self)
         self.addService(service: FavoritesService())
     }

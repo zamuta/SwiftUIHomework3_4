@@ -8,7 +8,7 @@
 import SwiftUI
 
 extension View {
-    func toAnyView()->AnyView {
+    public func toAnyView() -> AnyView {
         AnyView(self)
     }
 }

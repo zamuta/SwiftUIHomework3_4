@@ -6,6 +6,7 @@
 //
 
 import SwiftUI
+import HomeWorkUI
 
 struct NewsInfo1ScreenView: View {
     var title: String

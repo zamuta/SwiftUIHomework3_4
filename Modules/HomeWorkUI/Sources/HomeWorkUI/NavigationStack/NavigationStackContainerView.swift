@@ -7,13 +7,13 @@
 
 import SwiftUI
 
-struct NavigationStackContainerView<Content:View>: View {
+public struct NavigationStackContainerView<Content:View>: View {
     @ObservedObject var viewModel = NavigationContainerViewModel()
     private let content: Content
     private let animation: Animation = .easeOut(duration: 0.3)
     private let transition: (push: AnyTransition, pop: AnyTransition)
     
-    init(transition: NavigationStackTransition, @ViewBuilder content: @escaping ()-> Content) {
+    public init(transition: NavigationStackTransition, @ViewBuilder content: @escaping ()-> Content) {
         self.content = content()
         switch transition {
         case .none:
@@ -23,7 +23,7 @@ struct NavigationStackContainerView<Content:View>: View {
         }
     }
     
-    var body: some View {
+    public var body: some View {
         let isRoot = viewModel.currentScreen == nil
         return ZStack {
             if isRoot {

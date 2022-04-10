@@ -7,19 +7,19 @@
 
 import Foundation
 
-class ServiceLocator {
-    static let shared = ServiceLocator()
+public class ServiceLocator {
+    static public let shared = ServiceLocator()
     
     private var services: [String: AnyObject] = [:]
     
-    func addService<T>(service: T) {
+    public func addService<T>(service: T) {
         let key = "\(T.self)"
         if services[key] == nil {
             services[key] = service as AnyObject
         }
     }
     
-    func getService<T>(_ type: T.Type) -> T? {
+    public func getService<T>(_ type: T.Type) -> T? {
         let key = "\(T.self)"
         return services[key] as? T
     }

@@ -7,33 +7,33 @@
 
 import SwiftUI
 
-enum NavigationStackTransition {
+public enum NavigationStackTransition {
     case none
     case custom(AnyTransition)
 }
 
-enum NavigationStackNavigationType {
+public enum NavigationStackNavigationType {
     case pop
     case push
 }
 
-class NavigationContainerViewModel : ObservableObject {
+public class NavigationContainerViewModel : ObservableObject {
     @Published var currentScreen: NavigationStackScreen?
-    var navigationType: NavigationStackNavigationType = .push
+    public var navigationType: NavigationStackNavigationType = .push
     
-    var screenStack = NavigationStack() {
+    public var screenStack = NavigationStack() {
         didSet {
             self.currentScreen = screenStack.top()
         }
     }
     
-    func push(screenView: AnyView) {
+    public func push(screenView: AnyView) {
         self.navigationType = .push
         let screen = NavigationStackScreen(view: screenView)
         screenStack.push(screen)
     }
     
-    func pop() {
+    public func pop() {
         self.navigationType = .pop
         screenStack.pop()
     }

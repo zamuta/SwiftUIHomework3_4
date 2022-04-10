@@ -7,9 +7,9 @@
 
 import SwiftUI
 
-struct NavigationStackScreen: Identifiable, Equatable {
-    let id = UUID().uuidString
-    let view: AnyView
+public struct NavigationStackScreen: Identifiable, Equatable {
+    public let id = UUID().uuidString
+    public let view: AnyView
     
     public static func == (lhs: NavigationStackScreen, rhs: NavigationStackScreen)-> Bool {
         return lhs.id == rhs.id

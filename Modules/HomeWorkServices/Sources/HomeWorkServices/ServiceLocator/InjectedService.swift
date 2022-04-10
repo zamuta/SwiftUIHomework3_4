@@ -6,12 +6,13 @@
 //
 
 import Foundation
+import HomeWorkServices
 
 @propertyWrapper
-struct InjectedService<T> {
+public struct InjectedService<T> {
     private var service: T?
 
-    var wrappedValue: T {
+    public var wrappedValue: T {
         mutating get {
             if service == nil {
                 service = ServiceLocator.shared.getService(T.self)
@@ -21,5 +22,9 @@ struct InjectedService<T> {
             }
             return service!
         }
+    }
+    
+    public init(service: T? = nil) {
+        self.service = service
     }
 }

@@ -6,6 +6,7 @@
 //
 
 import SwiftUI
+import HomeWorkUI
 
 struct NewsScreenView: View {
     @StateObject private var multipleNewsViewModel: MultipleNewsViewModel = .init()

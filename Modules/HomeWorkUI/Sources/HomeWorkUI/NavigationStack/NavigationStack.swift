@@ -7,18 +7,18 @@
 
 import SwiftUI
 
-struct NavigationStack {
+public struct NavigationStack {
     private var screens: [NavigationStackScreen] = []
     
-    mutating func push(_ s: NavigationStackScreen) {
+    public mutating func push(_ s: NavigationStackScreen) {
         self.screens.append(s)
     }
     
-    mutating func pop() {
+    public mutating func pop() {
         _ = self.screens.popLast()
     }
     
-    func top()->NavigationStackScreen? {
+    public func top() -> NavigationStackScreen? {
         return self.screens.last
     }
 }

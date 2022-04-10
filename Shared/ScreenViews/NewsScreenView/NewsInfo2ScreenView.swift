@@ -6,6 +6,7 @@
 //
 
 import SwiftUI
+import HomeWorkUI
 
 struct NewsInfo2ScreenView: View {
     var imageUrl: String

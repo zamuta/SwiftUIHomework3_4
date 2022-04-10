@@ -7,6 +7,7 @@
 
 import SwiftUI
 import TheNewsAPI
+import HomeWorkServices
 
 class FavoritesViewModel: ObservableObject {
     @InjectedService var favoritesService: FavoritesService

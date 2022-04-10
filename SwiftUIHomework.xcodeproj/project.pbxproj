@@ -14,22 +14,15 @@
 		4D76684A27E47D7200437144 /* NewsScreenView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D76684927E47D7200437144 /* NewsScreenView.swift */; };
 		4D76684E27E47D8C00437144 /* FavoriteScreenView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D76684D27E47D8C00437144 /* FavoriteScreenView.swift */; };
 		4DA4B7872802C03D0017FAAB /* AddToFavoriteAnimationViewModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DA4B7862802C03D0017FAAB /* AddToFavoriteAnimationViewModifier.swift */; };
-		4DE0A96C27EF0A24006DD27E /* FavoritesService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DE0A96B27EF0A24006DD27E /* FavoritesService.swift */; };
 		4DE0A96E27F05573006DD27E /* NewsListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DE0A96D27F05573006DD27E /* NewsListView.swift */; };
 		4DE9275127E76BFD00F31978 /* TheNewsAPI in Frameworks */ = {isa = PBXBuildFile; productRef = 4DE9275027E76BFD00F31978 /* TheNewsAPI */; };
-		4DEC77972802CBA80069DB8F /* InjectedService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DEC77962802CBA80069DB8F /* InjectedService.swift */; };
-		4DEC779A2802CC430069DB8F /* ServiceLocator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DEC77992802CC430069DB8F /* ServiceLocator.swift */; };
 		4DEC77A02802E2340069DB8F /* FavoritesViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DEC779F2802E2340069DB8F /* FavoritesViewModel.swift */; };
-		4DEC77A32802E48F0069DB8F /* ServiceLocator+Configurator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DEC77A22802E48F0069DB8F /* ServiceLocator+Configurator.swift */; };
 		4DEC77A72802F46C0069DB8F /* MultipleNewsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DEC77A62802F46C0069DB8F /* MultipleNewsViewModel.swift */; };
-		4DF5EB0027EE216E0081F70F /* LazyView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DF5EAFF27EE216E0081F70F /* LazyView.swift */; };
+		4DEC77B328030D3B0069DB8F /* HomeWorkServices in Frameworks */ = {isa = PBXBuildFile; productRef = 4DEC77B228030D3B0069DB8F /* HomeWorkServices */; };
+		4DEC77B6280313050069DB8F /* HomeWorkUI in Frameworks */ = {isa = PBXBuildFile; productRef = 4DEC77B5280313050069DB8F /* HomeWorkUI */; };
+		4DEC77BA28031B640069DB8F /* ServiceLocator+Configurator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DEC77B928031B640069DB8F /* ServiceLocator+Configurator.swift */; };
 		4DF5EB0327EE3DB60081F70F /* NewsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DF5EB0227EE3DB60081F70F /* NewsViewModel.swift */; };
 		4DF5EB0527EE3E0E0081F70F /* AddToFavoriteEffect.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DF5EB0427EE3E0E0081F70F /* AddToFavoriteEffect.swift */; };
-		4DF5EB0827EE414B0081F70F /* NavigationStack.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DF5EB0727EE414B0081F70F /* NavigationStack.swift */; };
-		4DF5EB0A27EE41840081F70F /* NavigationStackScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DF5EB0927EE41840081F70F /* NavigationStackScreen.swift */; };
-		4DF5EB0C27EE42280081F70F /* NavigationStackContainerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DF5EB0B27EE42280081F70F /* NavigationStackContainerView.swift */; };
-		4DF5EB0E27EE426E0081F70F /* NavigationStackContainerViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DF5EB0D27EE426E0081F70F /* NavigationStackContainerViewModel.swift */; };
-		4DF5EB1627EE442E0081F70F /* View+NavigationStack.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DF5EB1527EE442E0081F70F /* View+NavigationStack.swift */; };
 		4DF5EB1827EE4B220081F70F /* NewsInfo1ScreenView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DF5EB1727EE4B220081F70F /* NewsInfo1ScreenView.swift */; };
 		4DF5EB1A27EE4B2D0081F70F /* NewsInfo2ScreenView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DF5EB1927EE4B2D0081F70F /* NewsInfo2ScreenView.swift */; };
 /* End PBXBuildFile section */
@@ -44,22 +37,15 @@
 		4D76684D27E47D8C00437144 /* FavoriteScreenView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoriteScreenView.swift; sourceTree = "<group>"; };
 		4DA4B7832802BE840017FAAB /* SwiftUIHomework--iOS--Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "SwiftUIHomework--iOS--Info.plist"; sourceTree = "<group>"; };
 		4DA4B7862802C03D0017FAAB /* AddToFavoriteAnimationViewModifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddToFavoriteAnimationViewModifier.swift; sourceTree = "<group>"; };
-		4DE0A96B27EF0A24006DD27E /* FavoritesService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoritesService.swift; sourceTree = "<group>"; };
 		4DE0A96D27F05573006DD27E /* NewsListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsListView.swift; sourceTree = "<group>"; };
 		4DE9274F27E76BF300F31978 /* TheNewsAPI */ = {isa = PBXFileReference; lastKnownFileType = wrapper; name = TheNewsAPI; path = Modules/TheNewsAPI; sourceTree = "<group>"; };
-		4DEC77962802CBA80069DB8F /* InjectedService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InjectedService.swift; sourceTree = "<group>"; };
-		4DEC77992802CC430069DB8F /* ServiceLocator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServiceLocator.swift; sourceTree = "<group>"; };
 		4DEC779F2802E2340069DB8F /* FavoritesViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoritesViewModel.swift; sourceTree = "<group>"; };
-		4DEC77A22802E48F0069DB8F /* ServiceLocator+Configurator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ServiceLocator+Configurator.swift"; sourceTree = "<group>"; };
 		4DEC77A62802F46C0069DB8F /* MultipleNewsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MultipleNewsViewModel.swift; sourceTree = "<group>"; };
-		4DF5EAFF27EE216E0081F70F /* LazyView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LazyView.swift; sourceTree = "<group>"; };
+		4DEC77B128030D2A0069DB8F /* HomeWorkServices */ = {isa = PBXFileReference; lastKnownFileType = wrapper; name = HomeWorkServices; path = Modules/HomeWorkServices; sourceTree = "<group>"; };
+		4DEC77B4280312990069DB8F /* HomeWorkUI */ = {isa = PBXFileReference; lastKnownFileType = wrapper; name = HomeWorkUI; path = Modules/HomeWorkUI; sourceTree = "<group>"; };
+		4DEC77B928031B640069DB8F /* ServiceLocator+Configurator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "ServiceLocator+Configurator.swift"; sourceTree = "<group>"; };
 		4DF5EB0227EE3DB60081F70F /* NewsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsViewModel.swift; sourceTree = "<group>"; };
 		4DF5EB0427EE3E0E0081F70F /* AddToFavoriteEffect.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddToFavoriteEffect.swift; sourceTree = "<group>"; };
-		4DF5EB0727EE414B0081F70F /* NavigationStack.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationStack.swift; sourceTree = "<group>"; };
-		4DF5EB0927EE41840081F70F /* NavigationStackScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationStackScreen.swift; sourceTree = "<group>"; };
-		4DF5EB0B27EE42280081F70F /* NavigationStackContainerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationStackContainerView.swift; sourceTree = "<group>"; };
-		4DF5EB0D27EE426E0081F70F /* NavigationStackContainerViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationStackContainerViewModel.swift; sourceTree = "<group>"; };
-		4DF5EB1527EE442E0081F70F /* View+NavigationStack.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "View+NavigationStack.swift"; sourceTree = "<group>"; };
 		4DF5EB1727EE4B220081F70F /* NewsInfo1ScreenView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsInfo1ScreenView.swift; sourceTree = "<group>"; };
 		4DF5EB1927EE4B2D0081F70F /* NewsInfo2ScreenView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsInfo2ScreenView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -69,7 +55,9 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4DEC77B328030D3B0069DB8F /* HomeWorkServices in Frameworks */,
 				4DE9275127E76BFD00F31978 /* TheNewsAPI in Frameworks */,
+				4DEC77B6280313050069DB8F /* HomeWorkUI in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -79,6 +67,8 @@
 		4D76682527E47AAF00437144 = {
 			isa = PBXGroup;
 			children = (
+				4DEC77B4280312990069DB8F /* HomeWorkUI */,
+				4DEC77B128030D2A0069DB8F /* HomeWorkServices */,
 				4DE9274F27E76BF300F31978 /* TheNewsAPI */,
 				4DA4B7832802BE840017FAAB /* SwiftUIHomework--iOS--Info.plist */,
 				4D76682A27E47AAF00437144 /* Shared */,
@@ -91,8 +81,6 @@
 			isa = PBXGroup;
 			children = (
 				4DEC77A12802E4180069DB8F /* Services */,
-				4DF5EB0627EE41250081F70F /* NavigationStack */,
-				4DA4B7842802BFBD0017FAAB /* SupportViews */,
 				4DA4B7852802BFD10017FAAB /* ScreenViews */,
 				4D76682B27E47AAF00437144 /* SwiftUIHomeworkApp.swift */,
 				4D76682C27E47AAF00437144 /* ContentView.swift */,
@@ -107,14 +95,6 @@
 				4D76683227E47AB300437144 /* SwiftUIHomework3_4.app */,
 			);
 			name = Products;
-			sourceTree = "<group>";
-		};
-		4DA4B7842802BFBD0017FAAB /* SupportViews */ = {
-			isa = PBXGroup;
-			children = (
-				4DF5EAFF27EE216E0081F70F /* LazyView.swift */,
-			);
-			path = SupportViews;
 			sourceTree = "<group>";
 		};
 		4DA4B7852802BFD10017FAAB /* ScreenViews */ = {
@@ -134,21 +114,10 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
-		4DEC77982802CC020069DB8F /* ServiceLocator */ = {
-			isa = PBXGroup;
-			children = (
-				4DEC77962802CBA80069DB8F /* InjectedService.swift */,
-				4DEC77992802CC430069DB8F /* ServiceLocator.swift */,
-				4DEC77A22802E48F0069DB8F /* ServiceLocator+Configurator.swift */,
-			);
-			path = ServiceLocator;
-			sourceTree = "<group>";
-		};
 		4DEC77A12802E4180069DB8F /* Services */ = {
 			isa = PBXGroup;
 			children = (
-				4DEC77982802CC020069DB8F /* ServiceLocator */,
-				4DE0A96B27EF0A24006DD27E /* FavoritesService.swift */,
+				4DEC77B928031B640069DB8F /* ServiceLocator+Configurator.swift */,
 			);
 			path = Services;
 			sourceTree = "<group>";
@@ -169,18 +138,6 @@
 			path = NewsScreenView;
 			sourceTree = "<group>";
 		};
-		4DF5EB0627EE41250081F70F /* NavigationStack */ = {
-			isa = PBXGroup;
-			children = (
-				4DF5EB0727EE414B0081F70F /* NavigationStack.swift */,
-				4DF5EB0927EE41840081F70F /* NavigationStackScreen.swift */,
-				4DF5EB0B27EE42280081F70F /* NavigationStackContainerView.swift */,
-				4DF5EB0D27EE426E0081F70F /* NavigationStackContainerViewModel.swift */,
-				4DF5EB1527EE442E0081F70F /* View+NavigationStack.swift */,
-			);
-			path = NavigationStack;
-			sourceTree = "<group>";
-		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -199,6 +156,8 @@
 			name = "SwiftUIHomework (iOS)";
 			packageProductDependencies = (
 				4DE9275027E76BFD00F31978 /* TheNewsAPI */,
+				4DEC77B228030D3B0069DB8F /* HomeWorkServices */,
+				4DEC77B5280313050069DB8F /* HomeWorkUI */,
 			);
 			productName = "SwiftUIHomework2 (iOS)";
 			productReference = 4D76683227E47AB300437144 /* SwiftUIHomework3_4.app */;
@@ -256,26 +215,17 @@
 				4D76684E27E47D8C00437144 /* FavoriteScreenView.swift in Sources */,
 				4DE0A96E27F05573006DD27E /* NewsListView.swift in Sources */,
 				4D26C43A27F9A0E000DA899B /* AddToFavoriteEffectV2.swift in Sources */,
-				4DEC77A32802E48F0069DB8F /* ServiceLocator+Configurator.swift in Sources */,
 				4DF5EB0527EE3E0E0081F70F /* AddToFavoriteEffect.swift in Sources */,
-				4DE0A96C27EF0A24006DD27E /* FavoritesService.swift in Sources */,
 				4DF5EB0327EE3DB60081F70F /* NewsViewModel.swift in Sources */,
 				4D76683D27E47AB300437144 /* ContentView.swift in Sources */,
-				4DF5EB1627EE442E0081F70F /* View+NavigationStack.swift in Sources */,
 				4D76683B27E47AB300437144 /* SwiftUIHomeworkApp.swift in Sources */,
-				4DEC77972802CBA80069DB8F /* InjectedService.swift in Sources */,
-				4DF5EB0C27EE42280081F70F /* NavigationStackContainerView.swift in Sources */,
 				4DEC77A02802E2340069DB8F /* FavoritesViewModel.swift in Sources */,
-				4DF5EB0027EE216E0081F70F /* LazyView.swift in Sources */,
 				4DEC77A72802F46C0069DB8F /* MultipleNewsViewModel.swift in Sources */,
 				4DF5EB1A27EE4B2D0081F70F /* NewsInfo2ScreenView.swift in Sources */,
-				4DF5EB0827EE414B0081F70F /* NavigationStack.swift in Sources */,
 				4DF5EB1827EE4B220081F70F /* NewsInfo1ScreenView.swift in Sources */,
-				4DF5EB0A27EE41840081F70F /* NavigationStackScreen.swift in Sources */,
-				4DEC779A2802CC430069DB8F /* ServiceLocator.swift in Sources */,
-				4DF5EB0E27EE426E0081F70F /* NavigationStackContainerViewModel.swift in Sources */,
 				4D76684A27E47D7200437144 /* NewsScreenView.swift in Sources */,
 				4DA4B7872802C03D0017FAAB /* AddToFavoriteAnimationViewModifier.swift in Sources */,
+				4DEC77BA28031B640069DB8F /* ServiceLocator+Configurator.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -483,6 +433,14 @@
 		4DE9275027E76BFD00F31978 /* TheNewsAPI */ = {
 			isa = XCSwiftPackageProductDependency;
 			productName = TheNewsAPI;
+		};
+		4DEC77B228030D3B0069DB8F /* HomeWorkServices */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = HomeWorkServices;
+		};
+		4DEC77B5280313050069DB8F /* HomeWorkUI */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = HomeWorkUI;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};

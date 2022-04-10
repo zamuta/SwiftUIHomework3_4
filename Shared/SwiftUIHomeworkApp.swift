@@ -6,6 +6,7 @@
 //
 
 import SwiftUI
+import HomeWorkServices
 
 @main
 struct SwiftUIHomeworkApp: App {
