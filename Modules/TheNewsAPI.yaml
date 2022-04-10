@@ -1,0 +1,155 @@
+openapi: 3.0.3
+info:
+  title: The News API
+  description: ...
+  version: 0.0.1
+# Servers
+servers:
+  - url: https://api.thenewsapi.com/v1
+# Tags
+tags:
+  - name: news
+# Requests
+paths:
+  # News
+  /news/all:
+    get:
+      tags:
+        - news
+      operationId: newsAllGet
+      parameters:
+        - name: api_token
+          in: query
+          required: true
+          schema:
+            type: string
+        - name: limit
+          in: query
+          required: true
+          schema:
+            type: integer
+        - name: page
+          in: query
+          required: true
+          schema:
+            type: integer
+        - name: search
+          in: query
+          schema:
+            type: string
+        - name: language
+          in: query
+          schema:
+            type: string
+      responses:
+        200:
+          description: Success
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  meta:
+                    $ref: "#/components/schemas/Meta"
+                  data:
+                    type: array
+                    items:
+                      $ref: "#/components/schemas/NewsInfo"
+        default:
+          $ref: "#/components/schemas/Unexpected"
+  /news/uuid/{uuid}:
+    get:
+      tags:
+        - news
+      operationId: newsByUUIDGet
+      parameters:
+        - name: api_token
+          in: query
+          required: true
+          schema:
+            type: string
+        - name: uuid
+          in: path
+          required: true
+          schema:
+            type: string
+      responses:
+        200:
+          description: Success
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/NewsInfo"
+        default:
+          $ref: "#/components/schemas/Unexpected"
+# Components
+components:
+  # Responses
+  responses:
+    Unexpected:
+      description: Unexpected error
+      content:
+        application/json:
+          schema:
+            $ref: "#/components/schemas/Error"
+  # Schemas
+  schemas:
+    # Base
+    Error:
+      type: object
+      required:
+        - code
+        - message
+      properties:
+        message:
+          type: string
+        code:
+          type: integer
+    Meta:
+      required:
+        - found
+        - returned
+        - limit
+        - page
+      type: object
+      properties:
+        found:
+          type: integer
+          example: 100500
+        returned:
+          type: integer
+          example: 10
+        limit:
+          type: integer
+          example: 10
+        page:
+          type: integer
+          example: 1
+    NewsInfo:
+      required:
+        - uuid
+        - title
+        - description
+        - url
+        - source
+      properties:
+        uuid:
+          type: string
+        title:
+          type: string
+        description:
+          type: string
+        url:
+          type: string
+        image_url:
+          type: string
+        language:
+          type: string
+        published_at:
+          type: string
+        source:
+          type: string
+        categories:
+          type: array
+          items:
+            type: string
